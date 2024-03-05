@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+</head>
+<body>
+    <h1>Student Satisfaction Survey</h1>
+
+    <form method="post" action="{% url 'App_Survey:survey_form' %}">
+        {% csrf_token %}
+
+        <!-- 1. Student Name -->
+        <label for="{{ response_form.student.id_for_label }}">Student Name:</label>
+        {{ response_form.student }}
+        <br>
+
+        <!-- 2. How is Food Quality? -->
+        <label>How is Food Quality?</label>
+        {{ response_form.question.id="food_quality" }}
+        {{ response_form.choice }}
+        <br>
+
+        <!-- 3. How is Food Quantity? -->
+        <label>How is Food Quantity?</label>
+        {{ response_form.question.id="food_quantity" }}
+        {{ response_form.choice }}
+        <br>
+
+        <!-- 4. What do you think of the Pricing? -->
+        <label>What do you think of the Pricing?</label>
+        {{ response_form.question.id="pricing" }}
+        {{ response_form.choice }}
+        <br>
+
+        <!-- 5. Your satisfaction with our canteen? -->
+        <label>Your satisfaction with our canteen?</label>
+        {{ response_form.question.id="satisfaction" }}
+        {{ response_form.choice }}
+        <br>
+
+        <!-- 6. Is the environment you are eating hygienic? -->
+        <label>Is the environment you are eating hygienic?</label>
+        {{ response_form.question.id="hygiene" }}
+        {{ response_form.choice }}
+        <br>
+
+        <!-- 7. How often do you use the canteen? -->
+        <label>How often do you use the canteen?</label>
+        {{ response_form.question.id="frequency" }}
+        {{ response_form.choice }}
+        <br>
+
+        <!-- 8. Is the Menu Okay? -->
+        <label>Is the Menu Okay?</label>
+        {{ response_form.question.id="menu_okay" }}
+        {{ response_form.choice }}
+        <br>
+
+        <!-- 9. Is there anything that you think should be on the menu? -->
+        <label>Is there anything that you think should be on the menu?</label>
+        {{ response_form.question.id="menu_suggestions" }}
+        {{ response_form.choice }}
+        <br>
+
+        <!-- 10. How is the Staff Behaviour? -->
+        <label>How is the Staff Behaviour?</label>
+        {{ response_form.question.id="staff_behaviour" }}
+        {{ response_form.choice }}
+        <br>
+
+        <!-- 11. Any comments on food and service? -->
+        <label>Any comments on food and service?</label>
+        {{ response_form.question.id="comments" }}
+        {{ response_form.choice }}
+        <br>
+
+        <!-- 12. Review -->
+        <label for="{{ response_form.review.id_for_label }}">Review:</label>
+        {{ response_form.review }}
+        <br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

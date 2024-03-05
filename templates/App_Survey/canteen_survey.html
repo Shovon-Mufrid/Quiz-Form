@@ -1,0 +1,78 @@
+<!-- templates/canteen_survey.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canteen Survey</title>
+</head>
+<body>
+    <h1>Canteen Survey</h1>
+    <form method="post" action="{% url 'App_Survey:canteen_survey' %}">
+        {% csrf_token %}
+        
+        <label for="{{ form.student_name.id_for_label }}">Student Name:</label>
+        {{ form.student_name }}
+        <br>
+
+        <label for="{{ form.student_id.id_for_label }}">Student ID:</label>
+        {{ form.student_id }}
+        <br>
+
+        <label for="{{ form.food_quality.id_for_label }}">How is Food Quality?</label>
+        {{ form.food_quality }}
+        <br>
+
+        <label for="{{ form.food_quantity.id_for_label }}">How is Food Quantity?</label>
+        {{ form.food_quantity }}
+        <br>
+
+        <label for="{{ form.food_pricing.id_for_label }}">What do you think of the Pricing?</label>
+        {{ form.food_pricing }}
+        <br>
+
+        <label for="{{ form.canteen_satisfaction.id_for_label }}">Your satisfaction with our canteen?</label>
+        {{ form.canteen_satisfaction }}
+        <br>
+
+        <!-- <label for="{{ form.canteen_environment.id_for_label }}">Is the environment you are eating hygienic?</label>
+        {{ form.canteen_environment }}
+        <br> -->
+
+        <label for="{{ form.canteen_environment.id_for_label }}">Is the environment you are eating hygienic?</label>
+        <select id="{{ form.canteen_environment.id_for_label }}" name="{{ form.canteen_environment.name }}">
+            {% for value, label in form.canteen_environment.field.choices %}
+                <option value="{{ value }}" {% if form.canteen_environment.value == value %}selected{% endif %}>{{ label }}</option>
+            {% endfor %}
+        </select>
+        <br>
+
+        <label for="{{ form.canteen_usage.id_for_label }}">How often do you use the canteen?</label>
+        {{ form.canteen_usage }}
+        <br>
+
+        <label for="{{ form.canteen_serial.id_for_label }}">Is order serial maintained?</label>
+        {{ form.canteen_serial }}
+        <br>
+
+        <label for="{{ form.initial_menu.id_for_label }}">Is the Menu Okay?</label>
+        {{ form.initial_menu }}
+        <br>
+
+        <label for="{{ form.preferred_menu.id_for_label }}">Is there anything that you think should be on the menu?</label>
+        {{ form.preferred_menu }}
+        <br>
+
+        <label for="{{ form.staff_behavior.id_for_label }}">How is the Staff Behaviour?</label>
+        {{ form.staff_behavior }}
+        <br>
+
+        <label for="{{ form.note.id_for_label }}">Any additional comments on food and service?</label>
+        {{ form.note }}
+        <br>
+
+        <button type="submit">Submit Survey</button>
+    </form>
+</body>
+</html>
