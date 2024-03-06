@@ -10,3 +10,4 @@ asgiref==3.6.0
 django-tempus-dominus
 django-guest-user
 django-jazzmin
+django-form-surveys

@@ -41,7 +41,7 @@
         <br> -->
 
         <label for="{{ form.canteen_environment.id_for_label }}">Is the environment you are eating hygienic?</label>
-        <select id="{{ form.canteen_environment.id_for_label }}" name="{{ form.canteen_environment.name }}">
+        <select id="{{ form.canteen_environment.id_for_label }}" name="{{ form.canteen_environment.name }}" multiple>
             {% for value, label in form.canteen_environment.field.choices %}
                 <option value="{{ value }}" {% if form.canteen_environment.value == value %}selected{% endif %}>{{ label }}</option>
             {% endfor %}

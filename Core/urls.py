@@ -7,7 +7,8 @@ from django.urls import path, include
 # app_name = 'App_Survey'
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include("App_Survey.urls")),
+    # path('',include("App_Survey.urls")),
+    path('surveys/', include('djf_surveys.urls'))
     # path('survey/<int:survey_id>/', views.survey_form, name='survey_form'),
 ]
 
