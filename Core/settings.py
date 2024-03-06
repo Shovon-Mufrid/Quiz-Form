@@ -120,3 +120,6 @@ STATIC_ROOT =   Path.joinpath( BASE_DIR , "static",)
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# SURVEY_MASTER_TEMPLATE = 'App_Survey/thank_you.html'
+SURVEY_ANONYMOUS_VIEW_LIST = 'App_Survey/thank_you.html'

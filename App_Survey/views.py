@@ -1,6 +1,6 @@
 # # views.py
 
-# from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect
 # from .models import CanteenStaticSurvey
 # from .forms import CanteenSurveyForm
 
@@ -15,5 +15,5 @@
 
 #     return render(request, 'App_Survey/canteen_survey.html', {'form': form})
 
-# def thank_you(request):
-#     return render(request, 'App_Survey/thank_you.html')
+def thank_you(request):
+    return render(request, 'App_Survey/thank_you.html')

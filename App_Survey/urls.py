@@ -5,5 +5,5 @@ app_name = 'App_Survey'
 
 urlpatterns = [
     # path('', views.canteen_survey, name='canteen_survey'),
-    # path('thank-you/', views.thank_you, name='thank_you'),
+    path('thank-you/', views.thank_you, name='thank_you'),
 ]
