@@ -1,5 +1,5 @@
 # Survey Form
-This is new Meal Planner project for The ICT Hub
+This is a survey form for client on their catering service
 
 
 Virtual Environment Set Up
@@ -44,4 +44,19 @@ Run Project
 
 ```
 python manage.py runserver
+```
+To Check the dashboard
+
+```
+http://127.0.0.1:8000/surveys/dashboard/
+```
+To check survey
+
+```
+http://127.0.0.1:8000/surveys/
+```
+
+To Form Fill up the survey:
+```
+http://127.0.0.1:8000/surveys/{id}
 ```
