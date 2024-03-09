@@ -122,4 +122,4 @@ STATIC_ROOT =   Path.joinpath( BASE_DIR , "static",)
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # SURVEY_MASTER_TEMPLATE = 'App_Survey/thank_you.html'
-SURVEY_ANONYMOUS_VIEW_LIST = 'App_Survey/thank_you.html'
+# SURVEY_ANONYMOUS_VIEW_LIST = ''
